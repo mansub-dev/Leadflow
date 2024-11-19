@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .input {
+    @apply h-11 w-72 rounded-xl p-2 outline-none border border-slate-300 md:w-80 md:rounded-xl 
+  }
+
+  .input-tag{
+    @apply  text-sm mb-1
+  }
+
+  .button-style{
+    @apply text-white flex items-center justify-center bg-blue-600 h-11 w-72 rounded-xl p-2 md:h-11 md:w-80 md:rounded-xl md:p-4  mt-1
+  }
+
+  .google-box{
+    @apply border border-slate-300  p-2 w-fit rounded-md flex flex-row gap-2 justify-center md:h-11 md:w-80 
+  }
+
+  .google-box-2{
+    @apply flex gap-2 items-center justify-center text-base
+  }
+
+  .centered-div{
+    @apply flex flex-col items-center justify-center bg-white text-black object-cover
+  }
+  
+}
