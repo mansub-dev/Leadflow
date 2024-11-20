@@ -42,7 +42,10 @@ body {
   }
 
   .centered-div{
-    @apply flex flex-col items-center justify-center bg-white text-black object-cover
+    @apply flex flex-row gap-20 justify-center
+  }
+  .card-styling{
+    @apply border rounded-lg shadow-inner p-4 text-black
   }
   
 }
