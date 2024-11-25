@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .input {
+    @apply h-11 w-72 rounded-xl p-2 outline-none border border-slate-300 md:w-80 md:rounded-xl dark:border-neutral-700
+  }
+
+  .input-tag {
+    @apply text-sm mb-1 md:w-80 w-72
+  }
+
+  .button-style {
+    @apply text-white flex items-center bg-green-500 justify-center h-11 w-72 rounded-xl p-2 md:h-11 md:w-80 md:rounded-xl md:p-4 mt-2
+  }
+
+  .google-box {
+    @apply border border-slate-300 p-2 w-fit rounded-md flex flex-row gap-2 justify-center md:h-11 md:w-80
+  }
+
+  .google-box-2 {
+    @apply flex gap-2 items-center justify-center text-base
+  }
+
+  .centered-div {
+    @apply flex items-center gap-20 justify-center dark:bg-black dark:text-white md:mt-2 mt-10
+  }
+
+  .card-styling {
+    @apply md:p-4 text-black dark:bg-black dark:text-white dark:border-none dark:shadow-sm dark:shadow-green-500 border rounded-lg shadow-inner
+  }
+
+  .button-homepage {
+    @apply outline-none bg-black text-white dark:bg-white dark:text-black rounded-xl p-3
+  }
+
+  .theme {
+    @apply dark:bg-black dark:text-white bg-white text-black
+  }
+}
